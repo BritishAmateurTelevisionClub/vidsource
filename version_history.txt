@@ -1,0 +1,6 @@
+202012150
+Blank black screen between card selections
+Use Raspios Buster Lite 20201202 release
+
+202010300
+Initial build

@@ -318,7 +318,7 @@ int main(int argc, char **argv)
 			strcat (bannertext,"    ") ;
 		}
 	}
-	printf ("\n") ;
+//	printf ("\n") ;
 	if (errors)
 	{
 		printf ("Usage: %s \"FILENAME(S)\" XOFFSET YOFFSET \"BALLOONTEXT\" \"BANNERTEXT\" \n",VERSION) ;
@@ -329,7 +329,7 @@ int main(int argc, char **argv)
 		exit (2) ;
 	}
 
-	printf ("\n%s: Test Card Animator\n",VERSION) ;
+//	printf ("\n%s: Test Card Animator\n",VERSION) ;
 	if (namecount > 1)
 	{
 		printf ("Using image files in this order: \n") ;

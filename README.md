@@ -1,11 +1,11 @@
 ![vidsource banner](/README_Image.JPG)
 # BATC Composite Video Source for Raspberry Pi Zero 
 
-This software build for a Raspberry Pi Zero enables it to become a very simple Composite Video (PAL) test card generator or camera (with a Pi Camera).  Only 2 external controls are required.  A pushbutton between pins 18 and 20 to select the desired testcard and, if a camera is fitted, a switch between pins 16 and 14 to select the camera.
+This software build for a Raspberry Pi Zero enables it to become a very simple Composite Video (PAL) test card generator or camera (with a Pi Camera).  Only 2 external controls are required.  A pushbutton between pins 18 and 20 to select the desired testcard and, if a camera is fitted, a switch between pins 16 and 14 to select the camera.  The design was described in CQ-TV 270.
 
 The current installation method only needs a Windows PC connected to the same (internet-connected) network as a Raspberry Pi 1 2 or 3.  Do not connect a keyboard or HDMI display directly to your Raspberry Pi.  You could connect a composite video display, but it is not required at this stage.
 
-- First download the 2020-08-20 release of Raspios Buster Lite on to your Windows PC from here https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2020-08-24/2020-08-20-raspios-buster-armhf-lite.zip 
+- First download the 2020-12-02 release of Raspios Buster Lite on to your Windows PC from here https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2020-12-04/2020-12-02-raspios-buster-armhf-lite.zip 
 
 - Unzip the image and then transfer it to a Micro-SD Card using Win32diskimager https://sourceforge.net/projects/win32diskimager/
 
@@ -26,6 +26,8 @@ chmod +x install.sh
 ```
 
 The build will request that you enter your callsign and locator, and then finish off in about 15 minutes with no more user input required, so go and make a cup of coffee wait for it to reboot.  When the build is finished the Pi will reboot and show the first testcard on the compositie video output.  You can then shutdown and put the built card into a Raspberry Pi Zero.
+
+An alternative installation method is to download the complete release image (see the "Releases" section above right), unzip it and write it to an SD Card. 
 
 - If your ISP is Virgin Media and you receive an error after entering the wget line: 'GnuTLS: A TLS fatal alert has been received.', it may be that your ISP is blocking access to GitHub.  If (only if) you get this error with Virgin Media, paste the following command in, and press return.
 ```sh

@@ -99,7 +99,7 @@ while true; do            # Main loop
     done
   fi
 
-  echo $filename
+  #echo $filename
 
     { read p1; read p2; read p3; read p4; read p5; read p6; } < $filename
     quote="\""
@@ -108,7 +108,7 @@ while true; do            # Main loop
     command="./"
     command2="& export pid=\$!"
     command="$command$p1$space$quote$p2$quote$space$position$space$quote$p5$quote$space$quote$p6$quote$space$command2"
-    echo $command
+    #echo $command
     eval $command
 
   #echo $pid

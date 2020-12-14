@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # called by .bashrc on startup to generate labelled cards and make the testcard run
-# Dave G8GKQ October 2020
+# Dave G8GKQ December 2020
 
 # Read in the user details
 
@@ -37,6 +37,13 @@ sudo cp /home/pi/tmp/contest.jpg /boot/testcard/contest.jpg
 
 sudo sed -i "s/TestText/${CALL} in ${LOCATOR}/g" /boot/testcard/tcdata1.txt
 sudo sed -i "s/TestText/${CALL} in ${LOCATOR}/g" /boot/testcard/tcdata2.txt
+
+# if banner text includes BATC or IO90LU, replace it with latest callsign and locator
+
+sudo sed -i "/BATC/c\\$CALL in $LOCATOR" /boot/testcard/tcdata1.txt
+sudo sed -i "/BATC/c\\$CALL in $LOCATOR" /boot/testcard/tcdata2.txt
+sudo sed -i "/IO90LU/c\\$CALL in $LOCATOR" /boot/testcard/tcdata1.txt
+sudo sed -i "/IO90LU/c\\$CALL in $LOCATOR" /boot/testcard/tcdata2.txt
 
 # Run the Test card generator
 
